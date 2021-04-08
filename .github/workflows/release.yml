@@ -26,5 +26,5 @@ jobs:
           password: ${{ github.token }}
           registry: docker.pkg.github.com
           build_args: RUNNER_VERSION=2.277.1
-          repository: ilDefra99/github-runner-docker/github-runner
+          repository: ildefra99/github-runner-docker/github-runner
           tag_with_ref: true
