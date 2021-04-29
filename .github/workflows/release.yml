@@ -18,11 +18,11 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: ildefra99/github-runner
           tag_with_ref: true
-      - name: Push to GitHub Packages
-        uses: docker/build-push-action@v1.1.1
-        with:
-          username: ${{ github.actor }}
-          password: ${{ github.token }}
-          registry: docker.pkg.github.com
-          repository: ildefra99/github-runner-docker/github-runner
-          tag_with_ref: true
+      #- name: Push to GitHub Packages
+        #uses: docker/build-push-action@v1.1.1
+        #with:
+          #username: ${{ github.actor }}
+          #password: ${{ github.token }}
+          #registry: docker.pkg.github.com
+          #repository: ildefra99/github-runner-docker/github-runner
+          #tag_with_ref: true
