@@ -38,6 +38,11 @@ Url of the github repository on which it is to be installed (*example: https://g
 ```
 Access tokens for github actions
 You can find it in the github repository settings under "Actions" and "Self Hosted Runner".
+### RUNNER_VERSION
+```
+-e RUNNER_VERSION=<RUNNER_VERSION>
+```
+Github runner version
 
 ## Docker Compose
 You can use this image in a docker compose stack as in the following example
@@ -49,4 +54,5 @@ services:
     environment:
       URL=<GITHUB_REPO_URL>
       TOKEN=<GITHUB_TOKEN>
+      RUNNER_VERSION=<RUNNER_VERSION>
 ```
