@@ -43,7 +43,11 @@ You can find it in the github repository settings under "Actions" and "Self Host
 -e RUNNER_VERSION=<RUNNER_VERSION>
 ```
 Github runner version
-
+### RUNNER_NAME
+```
+-e RUNNER_NAME=<RUNNER_NAME>
+```
+Github runner name
 ## Docker Compose
 You can use this image in a docker compose stack as in the following example
 ```

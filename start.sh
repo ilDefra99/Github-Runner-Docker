@@ -3,6 +3,7 @@
 REPO_URL=$URL
 GITHUB_TOKEN=$TOKEN
 RUNNER_VERSION=$RUNNER_VERSION
+RUNNER_NAME=$RUNNER_NAME
 
 cd /home/docker && mkdir actions-runner && cd actions-runner \
     && curl -O -L https://github.com/actions/runner/releases/download/v${RUNNER_VERSION}/actions-runner-linux-x64-${RUNNER_VERSION}.tar.gz \
@@ -10,7 +11,7 @@ cd /home/docker && mkdir actions-runner && cd actions-runner \
 sudo chown -R docker /home/docker && /home/docker/actions-runner/bin/installdependencies.sh
 cd /home/docker/actions-runner
 
-./config.sh --url ${REPO_URL} --token  ${GITHUB_TOKEN}
+./config.sh --name ${RUNNER_NAME} --url ${REPO_URL} --token ${GITHUB_TOKEN}
 
 cleanup() {
     echo "Removing runner..."
